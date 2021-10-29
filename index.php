@@ -5,6 +5,15 @@ ini_set('display_errors', 'on');
 
 include_once "funciones/Personas.php";
 // esto deberia vista
-echo imprimirHola("Miguel Padron",50000);
+echo "<br>";
+$resp = LoginUsuario('mp','1234567');
+
+if( $resp['si'] ){
+    
+    echo imprimirHola("Miguel Padron",50000). " y su rol dentro del sistema es ".$resp['nombre-rol'];
+}else{
+    
+    echo "Usted no esta en el sistema contactar al admin";
+}
 
 ?>

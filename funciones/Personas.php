@@ -1,5 +1,6 @@
 <?php
 include_once "CalculoSueldo.php";
+include_once "Login.php";
 
 // carpeta logica programacion
 function imprimirHola($n,$s)
