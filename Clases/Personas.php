@@ -6,10 +6,33 @@ class Personas
 {
     // public ,protected, private
     public $rol_sistema= "Admin";
+    private $sueldo= "50,000 $";
+    // protected
 
     public function __construct()
     {
         echo "Binevendo al sistemas {$this->rol_sistema} <br>";
+    }
+
+    // method is private
+    private function cedula(){
+        $c = "9883255";
+        return $c;
+    }
+
+    public function getMostrarCedula(){
+        return $this->cedula();
+    }
+
+    //setters y getters
+    public function getImprimirSueldo(){
+        return $this->sueldo;
+    }
+
+    public function setAsignarSueldo($s){
+
+        $this->sueldo = $s;
+        // return $this->sueldo;
     }
     
     public function imprimirHola($n)

@@ -10,6 +10,12 @@ include_once "Clases/Personas.php";
 
 $objecto = new Personas();
 echo $objecto->imprimirHola('Miguel Padron');
+echo "<br>";
+$objecto->setAsignarSueldo("60,000 $");
+echo $objecto->getImprimirSueldo();
+echo "<br>";
+echo $objecto->getMostrarCedula();
+echo "<br>";
 
 
 
