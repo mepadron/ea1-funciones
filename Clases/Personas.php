@@ -6,7 +6,7 @@ class Personas
 {
     // public ,protected, private
     public $rol_sistema= "Admin";
-    private $sueldo= "50,000 $";
+    // private $sueldo= "50,000 $";
     // protected
 
     public function __construct()
@@ -48,6 +48,12 @@ class Personas
         
     }
 
+}
+
+class Trabajos extends Personas{
+    private $sueldo= "50,000 $";
+    protected $asignacion_pc = true;
+    public $lugar_trabajo= "AIS";
 }
 
 

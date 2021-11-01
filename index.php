@@ -16,6 +16,9 @@ echo $objecto->getImprimirSueldo();
 echo "<br>";
 echo $objecto->getMostrarCedula();
 echo "<br>";
+// $objecto2 = new Trabajos();
+echo $objecto->asignacion_pc;
+// echo "<br>";
 
 
 
