@@ -8,7 +8,9 @@ include_once "Template/plantilla_base.php";
 include_once "Clases/Login.php";
 
 if(isset($_POST['enviarF'])){
-  obtenerDatosFormularios($_POST['loginF'], $_POST['claveF']);
+  $validarUsuario= new LoginUsuario();
+
+  $validarUsuario->obtenerDatosFormularios($_POST['loginF'], $_POST['claveF']);
   
 }else{
 
