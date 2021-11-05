@@ -17,5 +17,16 @@ function LoginUsuario($loginF, $claveF){
     }
 }
 
+function obtenerDatosFormularios($l,$c){
+    // var_dump($l);    
+    // var_dump($c);    
+    if($l=="mep" and $c=="1234"){
+        echo "usted esta logueado dentro del sistema";
+    }else{
+        echo "NO ESTA logueado dentro del sistema";
+
+    }
+}
+
 // $c=LoginUsuario('mp','1234567');
 // print_r($c['si']);
