@@ -4,13 +4,20 @@ ini_set('display_errors', 'on');
 
 
 include_once "Template/plantilla_base.php";
-// include_once "Clases/Personas.php";
 include_once "Clases/Login.php";
 
 if(isset($_POST['enviarF'])){
+  include_once "Clases/Personas.php";
   $validarUsuario= new LoginUsuario();
+  $datosPersona= new Personas();
 
-  $validarUsuario->obtenerDatosFormularios($_POST['loginF'], $_POST['claveF']);
+  $resp = $validarUsuario->obtenerDatosFormularios($_POST['loginF'], $_POST['claveF']);
+  // echo " cedula del empleado ".$datosPersona->cedulaEmpleador;
+  if($resp){  
+    header('Location:empleado.php?cedula='.$datosPersona->cedulaEmpleador.'&nombre='.$datosPersona->nombreEmpleador.'&apellido='.$datosPersona->apellidoEmpleador);
+  }else{
+    echo "NO ESTA logueado dentro del sistema";
+  }
   
 }else{
 

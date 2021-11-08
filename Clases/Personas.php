@@ -4,6 +4,9 @@ include_once "Login.php";
 
 class Personas
 {
+    public $cedulaEmpleador="9883255";
+    public $nombreEmpleador="Miguel";
+    public $apellidoEmpleador="Padron";
     // public ,protected, private
     public $rol_sistema= "Admin";
     // private $sueldo= "50,000 $";
