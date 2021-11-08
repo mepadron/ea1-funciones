@@ -24,9 +24,11 @@ class LoginUsuario{
         // var_dump($l);    
         // var_dump($c);    
         if($l=="mep" and $c=="1234"){
-            echo "usted esta logueado dentro del sistema";
+            // echo "usted esta logueado dentro del sistema";
+            return true;
         }else{
-            echo "NO ESTA logueado dentro del sistema";
+            // echo "NO ESTA logueado dentro del sistema";
+            return false;
     
         }
     }

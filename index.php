@@ -11,8 +11,13 @@ if(isset($_POST['enviarF'])){
   $validarUsuario= new LoginUsuario();
   $datosPersona= new Personas();
 
-  $validarUsuario->obtenerDatosFormularios($_POST['loginF'], $_POST['claveF']);
-  echo " cedula del empleado ".$datosPersona->cedulaEmpleador;
+  $resp = $validarUsuario->obtenerDatosFormularios($_POST['loginF'], $_POST['claveF']);
+  // echo " cedula del empleado ".$datosPersona->cedulaEmpleador;
+  if($resp){  
+    header('Location:empleado.php?cedula='.$datosPersona->cedulaEmpleador.'&nombre='.$datosPersona->nombreEmpleador.'&apellido='.$datosPersona->apellidoEmpleador);
+  }else{
+    echo "NO ESTA logueado dentro del sistema";
+  }
   
 }else{
 
