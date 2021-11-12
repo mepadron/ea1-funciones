@@ -8,12 +8,16 @@ include_once "Clases/Login.php";
 
 if(isset($_POST['enviarF'])){
   include_once "Clases/Personas.php";
+  // include_once "Libreria/helpers.php";
+  // $lb= new Helpers();
   $validarUsuario= new LoginUsuario();
   $datosPersona= new Personas();
 
+  
   $resp = $validarUsuario->obtenerDatosFormularios($_POST['loginF'], $_POST['claveF']);
   // echo " cedula del empleado ".$datosPersona->cedulaEmpleador;
   if($resp){  
+    // echo $lb->base_url();
     header('Location:empleado.php?cedula='.$datosPersona->cedulaEmpleador.'&nombre='.$datosPersona->nombreEmpleador.'&apellido='.$datosPersona->apellidoEmpleador);
   }else{
     echo "NO ESTA logueado dentro del sistema";

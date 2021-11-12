@@ -1,5 +1,7 @@
 <?php
 include_once "Template/plantilla_base.php";
+include_once "Libreria/helpers.php";
+$lb= new Helpers();
 // echo "Estas en la pagina de empleado, tu cedula es {$_GET['cedula']} y tu nombre es {$_GET['nombre']}";
 ?>
 <div class="w-full bg-gray-800">
@@ -20,7 +22,11 @@ include_once "Template/plantilla_base.php";
                 <div class="text-center">
                     <p class="text-xl text-white font-bold mb-2"><?php echo "{$_GET['nombre']} {$_GET['apellido']}"?></p>
                     <p class="text-base text-gray-400 font-normal"><?php echo "{$_GET['cedula']}"?></p>
+                    <p class="text-base text-gray-400 font-normal"><?php echo "{$lb->base_url()}"?></p>
                     <p class="text-base text-gray-400 font-normal">Software Engineer</p>
+                    <p class="text-base text-gray-400 font-normal">
+                        <img src="<?php echo "{$lb->base_url()}"?>/2021-2/ea1/assets/icon/icon-logo.png" alt="">
+                    </p>
                 </div>
             </div>
             <div class="w-full bg-gray-900 rounded-lg sahdow-lg p-12 flex flex-col justify-center items-center">
