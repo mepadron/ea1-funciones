@@ -3,7 +3,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
 include_once "Libreria/helpers.php";
-class LoginUsuario{
+include_once "models/Login_model.php";
+class LoginUsuario extends LoginModel {
 
     
     public function LoginUsuario($loginF, $claveF){
@@ -22,11 +23,7 @@ class LoginUsuario{
     }
     
     public function obtenerDatosFormularios($l,$c){
-        // var_dump($l);    
-        // var_dump($c);
-        // print_r(!empty($l))."<br>";
-        // print_r(!empty($c))."<br>";
-        //  if(!empty($l) or !empty($c)){
+        
             
             if(empty($l)){
                 echo "Login esta vacio<br>";
@@ -37,27 +34,11 @@ class LoginUsuario{
 
             }else{
                 //si el formato de correo es valido
+            $validadorUsuario = new LoginModel();
+            return $validadorUsuario->validarUsuario($l,$c);
 
-                if($l=="mep" and $c=="1234"){
-                    return true;
-                }else{
-                    // echo "NO ESTA logueado dentro del sistema";
-                    return false;
-    
-                }
+                
             }
-
-        //  }else{
-        //      echo "las caja de textos estan vacia<br>";
-        //  }      
-        // if($l=="mep" and $c=="1234"){
-        //     // echo "usted esta logueado dentro del sistema";
-        //     return true;
-        // }else{
-        //     // echo "NO ESTA logueado dentro del sistema";
-        //     return false;
-    
-        // }
     }
     
 
