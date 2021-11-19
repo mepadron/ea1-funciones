@@ -3,11 +3,11 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
 
-include_once "Template/plantilla_base.php";
-include_once "Clases/Login.php";
+include_once "views/Template/plantilla_base.php";
+include_once "controllers/Clases/Login.php";
 
 if(isset($_POST['enviarF'])){
-  include_once "Clases/Personas.php";
+  include_once "controllers/Clases/Personas.php";
   // include_once "Libreria/helpers.php";
   // $lb= new Helpers();
   $validarUsuario= new LoginUsuario();
@@ -18,7 +18,7 @@ if(isset($_POST['enviarF'])){
   // echo " cedula del empleado ".$datosPersona->cedulaEmpleador;
   if($resp){  
     // echo $lb->base_url();
-    header('Location:empleado.php?cedula='.$datosPersona->cedulaEmpleador.'&nombre='.$datosPersona->nombreEmpleador.'&apellido='.$datosPersona->apellidoEmpleador);
+    header('Location:views/empleado.php?cedula='.$datosPersona->cedulaEmpleador.'&nombre='.$datosPersona->nombreEmpleador.'&apellido='.$datosPersona->apellidoEmpleador);
   }else{
     echo "NO ESTA logueado dentro del sistema";
   }

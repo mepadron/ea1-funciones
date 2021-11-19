@@ -1,6 +1,9 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 'on');
+
 include_once "Template/plantilla_base.php";
-include_once "Libreria/helpers.php";
+include_once "../Libreria/helpers.php";
 $lb= new Helpers();
 // echo "Estas en la pagina de empleado, tu cedula es {$_GET['cedula']} y tu nombre es {$_GET['nombre']}";
 ?>
