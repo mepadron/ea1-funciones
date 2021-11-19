@@ -1,6 +1,6 @@
 <?php
-include_once "CalculoSueldo.php";
-include_once "Login.php";
+include_once "CalculoSueldo_controller.php";
+include_once "Login_controller.php";
 
 class Personas
 {
