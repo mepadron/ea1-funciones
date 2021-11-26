@@ -29,6 +29,7 @@ $lb= new Helpers();
                     <p class="text-base text-gray-400 font-normal">Software Engineer</p>
                     <p class="text-base text-gray-400 font-normal">
                         <img src="<?php echo "{$lb->base_url()}"?>/2021-2/ea1/assets/icon/icon-logo.png" alt="">
+                        <p><?php echo $_SESSION['s_usuario'][1] ." ".$_SESSION['s_usuario'][2]?></p>
                     </p>
                 </div>
             </div>
