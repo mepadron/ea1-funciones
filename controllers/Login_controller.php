@@ -35,7 +35,7 @@ class LoginUsuario extends LoginModel {
             }else{
                 //si el formato de correo es valido
             $validadorUsuario = new LoginModel();
-            $this->crearSesion();
+            // $this->crearSesion();
             return $validadorUsuario->validarUsuario($l,$c);
 
                 
