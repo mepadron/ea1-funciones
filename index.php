@@ -16,9 +16,9 @@ if(isset($_POST['enviarF'])){
   
   $resp = $validarUsuario->obtenerDatosFormularios($_POST['loginF'], $_POST['claveF']);
   // echo " cedula del empleado ".$datosPersona->cedulaEmpleador;
-  if($resp){  
+  if($resp['validacion']){  
     // echo $lb->base_url();
-    header('Location:views/empleado.php?cedula='.$datosPersona->cedulaEmpleador.'&nombre='.$datosPersona->nombreEmpleador.'&apellido='.$datosPersona->apellidoEmpleador);
+    header('Location:views/empleado.php?cedula='.$resp["cedulaEmpleado"].'&nombre='.$resp["nombreEmpleado"].'&apellido='.$resp["apellidoEmpleado"]);
   }else{
     // echo "NO ESTA logueado dentro del sistema {$_SESSION['s_usuario'][1]} {$_SESSION['s_usuario'][2]}";
     echo "NO ESTA logueado dentro del sistema ";
