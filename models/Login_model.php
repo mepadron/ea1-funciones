@@ -26,18 +26,21 @@ class LoginModel{
         $datosBD2['cargoEmpleado']= "Gerente";
         $datosBD2['salarioEmpleado']= 10000;
         $datosBD2[]=$datosBD;
-        return $datosBD2;        
-        // if($lf==$datosBD['login'] and $cf==$datosBD['clave']){
-        //     $datosBD['validacion']= true;
-        //     return $datosBD;
-        // }else{
-        //     $datosBD['validacion']= false;
-        //     // echo "NO ESTA logueado dentro del sistema";
-        //     return $datosBD;
-
-        // }
+        echo $datosBD2[0]['clave'];        
+        if($lf==$datosBD['login'] and $cf==$datosBD['clave']){
+            $datosBD['validacion']= true;
+            return $datosBD;
+        }else if($lf==$datosBD2[0]['login'] and $cf==$datosBD2[0]['clave']){
+            $datosBD['validacion']= true;
+            // echo "NO ESTA logueado dentro del sistema";
+            return $datosBD2;
+            
+        }else{
+            
+            echo "NO ESTA logueado dentro del sistema";
+        }
     }
 }
 
 $l = new LoginModel();
-print_r($l->validarUsuario('lolo','878978'));
+print_r($l->validarUsuario('mps','1234'));
