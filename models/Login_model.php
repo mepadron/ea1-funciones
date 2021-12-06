@@ -26,7 +26,7 @@ class LoginModel{
         $datosBD2['cargoEmpleado']= "Gerente";
         $datosBD2['salarioEmpleado']= 10000;
         $datosBD2[]=$datosBD;
-        return count($datosBD2);        
+        return $datosBD2;        
         // if($lf==$datosBD['login'] and $cf==$datosBD['clave']){
         //     $datosBD['validacion']= true;
         //     return $datosBD;
